@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.1/css/unicons.css">
+    <link rel="shortcut icon" href="../Persona/images/user.jpg">
+    <link rel="stylesheet" href="../Persona/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+
+
+    <title>Persona Creation</title>
+</head>
+<body>
+
+    <nav>
+        <div class="container inner">
+            <div class="logo">
+                <i class="uil uil-cell"></i>
+                Persona
+            </div>
+            <div>
+              
+                      
+                                
+                        <button id="demo"  class="downloadtable" onclick="submitForm()">
+                                <i class="uil uil-print"></i>
+                                Download
+                            </button>
+                          
+                
+              
+            </div>
+        </div>
+    </nav>
+
+    <main id="tablecontainer" class="container">
+      
+                <section class="profile">
+                        <div class="left">
+                            <div class="avatar_block">
+                                <img src="./images/user.jpg" alt="">
+                                <span>
+                                    <i class="uil uil-comment-dots"></i>
+                                </span>
+                            </div>
+            
+                            <div>
+                                <h2 ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="is-visible"> <input type="text" name="name" value="<%=data.name %>"  > </h2>
+                                <p class="cd-headline loading-bar">
+                                    <span class="cd-words-wrapper">
+                                        <b ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="is-visible"><input type="text" name="prof" value="<%=data.prof %> " ></b>
+                                    </span> 
+                                </p>
+                            </div>
+            
+                        </div>
+                        <div class="right">
+                            <ul class="contact">
+                                <li>
+                                    <i class="uil uil-envelope"></i>
+                                    <strong>Age : </strong>
+                                    <input type="number" name="age" value=<%=data.age%> placeholder="Actual Age or Range" required> 
+                                </li>
+                                <li>
+                                    <i class="uil uil-envelope"></i>
+                                    <strong>Gender : </strong>
+                                    <input type="text" name="gender" value=<%=data.gender%> placeholder="Male , Female , Other" required> 
+                                </li>
+                                <li>
+                                    <i class="uil uil-envelope"></i>
+                                    <strong>Address: </strong>
+                                    <input type="text" name="address" value="<%=data.address%> "placeholder="State, City, Country" required> 
+                                </li>
+                                
+                                <li>
+                                    <i class="uil uil-envelope"></i>
+                                    <strong>Education : </strong>
+                                    <input type="text" name="education" value="<%=data.education%>" placeholder="Highest Level education" required> 
+                                </li>
+                                
+                                <li>
+                                    <i class="uil uil-envelope"></i>
+                                    <strong>Marital Status : </strong>
+                                    <input  type="text" name="status" value="<%=data.status%>" placeholder="Single, Married, Divorced" required> 
+                                </li>
+                            </ul>
+            
+                        </div>
+                    </section>
+            
+                    <section class="about">
+                        <h1 class="section_heading">Quick Summary</h1>
+                        <div class="content">
+                            <div class="left">
+                                <H2 ondblclick="makeEditable(this)" onblur="makeReadOnly(this)"  class="is-visible"><input type="text" style="color: #8997bd" value="<%=data.intro_name%> "  name="intro_name"></H2>
+                                <p ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="is-visible"> <textarea style="width: 483px; height:193px; background:transparent; color: #8997bd" type="desc"  name="intro_desc"><%=data.intro_desc%> </textarea>
+                                </p>
+                            </div>
+                            <div class="right">
+                                <p>
+                                    <span>of Birth</span>
+                                    <span><input style="background-color:#1a253f;" name="dob" value="<%=data.dob%>" type="number" placeholder="Date of Birth" required></span>
+                                </p>
+                                
+                                <p>
+                                    <span>Hobbies</span>
+                                    <span><input style="background-color:#1a253f;" name="hobbies" value="<%=data.hobbies%>" type="text" placeholder="Cricket, Football, traveling" required></span>
+                                </p>
+                                
+                                <p>
+                                    <span>Languages</span>
+                                    <span><input style="background-color:#1a253f;" name="languages" value="<%=data.languages%> " type="text" placeholder="English, Deutsch" required></span>
+                                </p>
+                                
+                                <p>
+                                    <span>Nationality</span>
+                                    <span><input style="background-color:#1a253f;" name="nationality" value="<%=data.nationality%>" type="text" placeholder="Pakistani, German" required></span>
+                                </p>
+                                
+                                <p>
+                                    <span>Interests</span>
+                                    <span><input style="background-color:#1a253f;"  name="interests" value="<%=data.interests%>" type="text" placeholder="books, comedy" required></span>
+                                </p>
+            
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="skills">
+                        <h1 class="section_heading">Education & Skills</h1>
+                        <div class="content">
+                            <div class="left">
+                                <div class="inner_left">
+                                    <div class="heading">
+                                        <i class="uil uil-graduation-cap"></i>
+                                        <h5>Education</h5>
+                                    </div>
+                                    <div class="timeline_wrapper">
+                                        <div class="item">
+                                            <p><input style="background-color:#1a253f;"  type="number"  name="ed_sc_date" placeholder="1990-2000" value="<%=data.ed_sc_date%>" required></p>
+                                            <p class="center"><input style="background-color:#1a253f;" name="ed_school" type="text" placeholder="High School" value=<%=data.ed_school%> required></p>
+                                            <p><input style="background-color:#1a253f;"  type="text" name="ed_college" placeholder="Secondary School" value="<%=data.ed_college%>" required></p>
+                                        </div>
+                                        <div class="item">
+                                            <p><input style="background-color:#1a253f;"  type="number" name="ed_uni_date" placeholder="1990-2000" value="<%=data.ed_uni_date%>" required></p>
+                                            <p class="center"><input style="background-color:#1a253f;" name="ed_uni_title" type="text" placeholder="University/College" value="<%=data.ed_uni_title%>" required></p>
+                                            <p><input style="background-color:#1a253f;"  type="text" name="ed_uni_desc" placeholder="BSc Computer Science" value="<%=data.ed_uni_desc%> "required></p>
+                                        </div>
+                                        <div class="item">
+                                            <p><input style="background-color:#1a253f;"  type="number" name="ed_ms_date" placeholder="1990-2000" value="<%=data.ed_ms_date%>" required></p>
+                                            <p class="center"><input style="background-color:#1a253f;" name="ed_ms_uni" type="text" placeholder="University" value="<%=data.ed_ms_uni%>" required></p>
+                                            <p><input style="background-color:#1a253f;"  type="text" name="ed_ms_desc" placeholder="MSc Computer Science" value="<%=data.ed_ms_desc%>" required></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_right">
+                                    <div class="heading">
+                                        <i class="uil uil-suitcase-alt"></i>
+                                        <h5>Experience</h5>
+                                    </div>
+                                <div class="timeline_wrapper">
+                                    <div class="item">                           
+                                        <p><input style="background-color:#1a253f;" name="work_date" type="number" placeholder="2011-2013" value=<%=data.work_date%> required></p>
+                                        <p class="center"><input style="background-color:#1a253f;" name="work_title" type="text" placeholder="UX/Ui Designer"  value=<%=data.work_title%> required></p>
+                                        <p><input style="background-color:#1a253f;"  type="text" name="work" placeholder="Design Company" value=<%=data.work%> required></p>
+                                    </div>
+                                    <div class="item">                
+                                        <p><input style="background-color:#1a253f;" name="work2_date" type="number" placeholder="2013-2016" value=<%=data.work2_date%> required></p>
+                                        <p class="center"><input style="background-color:#1a253f;"  name="work2_title" type="text" placeholder="Senior Executive" value=<%=data.work2_title%> required></p>
+                                        <p><input style="background-color:#1a253f;"  type="text" name="work2" placeholder="Bank" value=<%=data.work2%> required></p>
+                                    </div>
+                                    <div class="item">
+                                        <p><input style="background-color:#1a253f;"  type="number" name="work3_date" placeholder="2008-2010" value=<%=data.work3_date%> required></p>
+                                        <p class="center"><input style="background-color:#1a253f;" name="work3_title" type="text" placeholder="Front-End Developer"  value=<%=data.work3_title%> required></p>
+                                        <p><input style="background-color:#1a253f;"  type="text" name="work3" placeholder="Web Company" value=<%=data.work3%> required></p>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="right">
+                            <div class="skills_wrapper">
+                                <div class="skill-box">
+                                    <h4>Internet</h4>
+                                    <div class="progress_wrap">
+                                    <progress id="progressBar" name="skill_internet" max="1" value="0.1"></progress>
+                                    </div>
+                                </div>
+            
+                                <div class="skill-box">
+                                    <h4>Software</h4>
+                                    <div class="progress_wrap">
+                                    <progress id="progressBar1"  name="skill_software" max="1" value="0.1"></progress>
+                                    </div>
+                                </div>
+            
+                                <div class="skill-box">
+                                    <h4>Mobile Apps</h4>
+                                    <div class="progress_wrap">
+                                    <progress id="progressBar2" name="skill_mobileApps" max="1" value="0.1"></progress>
+                                    </div>
+                                </div>
+            
+                                <div class="skill-box">
+                                    <h4>Social Networks</h4>
+                                    <div class="progress_wrap">
+                                    <progress id="progressBar3" max="1" value="0.1"></progress>
+                                    </div>
+                                </div>
+            
+            
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+            
+                    <section class="family_section">
+                        <div>
+                            <h3><span>Family</span></h3>
+                            <p ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="is-visible">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+                        </div>
+                    </section>
+       
+     
+
+
+
+
+    </main>
+
+    <script src="../Persona/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+   
+   
+   
+   
+   
+   
+  
+</body>
+</html>

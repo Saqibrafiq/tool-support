@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.1/css/unicons.css">
+    <link rel="shortcut icon" href="../Persona/images/user.jpg">
+    <link rel="stylesheet" href="../Persona/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+
+
+    <title>Persona Creation</title>
+</head>
+<body>
+
+    <nav>
+        <div class="container inner">
+            <div class="logo">
+                <i class="uil uil-cell"></i>
+                Persona
+            </div>
+            <div>
+              
+                      
+                                
+                <button id="demo"  class="downloadtable" onclick="backbutton()">
+                    <i class="uil uil-print"></i>
+                    back
+                </button>
+                          
+                
+              
+            </div>
+        </div>
+    </nav>
+
+    <main id="tablecontainer" class="container">
+  
+     
+        <p>  <%=data%> </p>
+
+
+
+    </main>
+
+    <script src="../Persona/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+   
+   
+   <script>
+       function backbutton(){
+        window.location = 'http://localhost:5000/Persona/';
+       }
+   </script>
+   
+   
+   
+  
+</body>
+</html>
