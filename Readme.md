@@ -1,2 +1,3 @@
-# to run the server we have to go into the folder of server then run command
-Node server.js
+#Tool Support to integrate use of Persona and Usecase.
+
+This is prototype tool develop for University project.
